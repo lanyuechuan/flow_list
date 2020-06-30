@@ -12,13 +12,14 @@ from django.db import models
 
 class Flow(models.Model):
     """账单流水"""
+    id = models.AutoField(verbose_name="id",primary_key=True)
     organization_id = models.CharField(verbose_name="组织机构id", max_length=64)
-    flow_type = models.CharField(verbose_name="流水类型", max_length=1,blank=True,default=1)
+    flow_type = models.CharField(verbose_name="流水类型", max_length=1,blank=True)
     purchase_content = models.CharField(verbose_name="变动原因", max_length=32, blank=True, null=True)
     operator = models.CharField(verbose_name="操作人", max_length=64)
-    init_amount = models.DecimalField(verbose_name="起始金额", max_digits=10, decimal_places=2)
-    price = models.DecimalField(verbose_name="变动金额", max_digits=10, decimal_places=2)
-    now_amount = models.DecimalField(verbose_name="最后金额",max_digits=10,decimal_places=2)
+    init_amount = models.FloatField(verbose_name="起始金额")
+    price = models.FloatField(verbose_name="变动金额")
+    now_amount = models.FloatField(verbose_name="最后金额")
     create_time = models.DateTimeField(verbose_name="创建时间", auto_now_add=True)
 
 
