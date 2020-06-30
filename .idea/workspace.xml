@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c43fc3de-e653-42de-962d-467094bd0847" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lan.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="c43fc3de-e653-42de-962d-467094bd0847" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-218">
+            <state relative-caret-position="-204">
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -60,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -89,12 +86,41 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="248" />
-    <option name="y" value="11" />
+    <option name="x" value="129" />
+    <option name="y" value="46" />
     <option name="width" value="1183" />
     <option name="height" value="1100" />
   </component>
   <component name="ProjectId" id="1dzUebr0gHxUoQGN6SZhfANSXeK" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="flow_list" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flow_list" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flow_list" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flow_list" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flow_list" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flow_list" type="462c0819:PsiDirectoryNode" />
+              <item name="FlowList" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -210,7 +236,7 @@
       <workItem from="1593414378035" duration="2284000" />
       <workItem from="1593427518531" duration="1496000" />
       <workItem from="1593429085649" duration="10513000" />
-      <workItem from="1593480693885" duration="238000" />
+      <workItem from="1593480693885" duration="491000" />
     </task>
     <servers />
   </component>
@@ -220,10 +246,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238000" />
+    <option name="totallyTimeSpent" value="491000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="248" y="11" width="1183" height="1100" extended-state="0" />
+    <frame x="129" y="46" width="1183" height="1100" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -253,19 +279,19 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-218">
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
