@@ -2,18 +2,38 @@ from rest_framework import mixins
 from rest_framework import viewsets
 from .models import Flow
 from .serializers import FlowSerializer
-from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.pagination import PageNumberPagination
 from rest_framework import status
 from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
+from .filters import FlowFilter
 # Create your views here.
+
+class MyPageNumberPagination(PageNumberPagination):
+    """普通分页类"""
+    # 每页展示多少条数据
+    page_size = 4
+    # 前端可以自己通过修改page=10，取哪一页的数据。
+    page_query_param = 'page'
+    # 前端可以?size=10000自己配置，每页想取多少条自己设置
+    page_size_query_param = 'size'
+    # 最大页码的查询参数名
+    max_page_size = 1000
+
 
 class FlowView(mixins.CreateModelMixin,mixins.ListModelMixin,mixins.DestroyModelMixin,viewsets.GenericViewSet):
     """流水get和post接口"""
     queryset = Flow.objects.all()  # 具体返回的数据
     serializer_class = FlowSerializer  # 指定过滤的类
-    filter_backends = [DjangoFilterBackend]  # 采用哪个过滤器
-    filterset_fields = ['organization_id','flow_type','purchase_content','operator','init_amount','price','now_amount','create_time']  # 进行查询的字段
+    # filter_backends = [DjangoFilterBackend]  # 采用哪个过滤器
+    # filterset_fields = ['organization_id','flow_type','purchase_content','operator','init_amount','price','now_amount','create_time']  # 进行查询的字段
+    filter_class = FlowFilter
+    search_fields = ('=id',)
+    ordering_fields = ('now_amount','create_time')
+    pagination_class = MyPageNumberPagination
+
+
+    def perform_create(self, serializer):
+        serializer.save(init_amount=self.request.data.get('init_amount'))
 
     def create(self,request):
         data = request.data.copy()
