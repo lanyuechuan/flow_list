@@ -25,7 +25,7 @@ SECRET_KEY = '%50++w-y)anboy7dts6&+v83fs2wk&pt2p&i5xt&r89w)yt%d('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.43.49",]
+ALLOWED_HOSTS = ["192.168.2.119",]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
     'rest_framework',
+    'rest_framework_filters',
     'django_filters',
 ]
 
@@ -128,14 +129,14 @@ STATIC_URL = '/static/'
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ],
-    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.AutoSchema',
     'DEFAULT_FILTER_BACKENDS': (
-        'django_filters.rest_framework.DjangoFilterBackend',
+        # 'django_filters.rest_framework.DjangoFilterBackend',  # django的filter
+        'rest_framework_filters.backends.RestFrameworkFilterBackend',  # rest的filter
+        'rest_framework.filters.OrderingFilter',
+        'rest_framework.filters.SearchFilter',
     ),
-    'DATETIME_FORMAT':'%Y-%m-%d %H:%M:%S',
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.AutoSchema', # 自动生成文档
+    'DATETIME_FORMAT':'%Y-%m-%d %H:%M:%S', # 时间格式设定
 
 
 }
